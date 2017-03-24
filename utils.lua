@@ -7,9 +7,12 @@ end
 
 --Mostra conteudo de um arquivo
 function show(f)
-    file.open(f, "r")
-    print(file.read())
-    file.close()
+    if file.open(f) then
+        print(file.read())
+        file.close()
+    else
+        print("Unable to open file")
+    end
 end
 
 function dir()
