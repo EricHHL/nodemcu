@@ -1,5 +1,5 @@
 if telnet_srv then
-    pcall(telnet_srv:close())
+    --pcall(telnet_srv:close())
 end
 telnet_srv = net.createServer(net.TCP, 180)
 telnet_srv:listen(23, function(socket)
